@@ -55,6 +55,9 @@
 
         <!-- Jakarta EE 规范 (替代 javax.*) -->
         <jakarta.interceptor.version>2.2.0</jakarta.interceptor.version>
+
+        <!-- 并行处理技术选型 https://liteflow.cc/pages/5816c5/ -->
+        <liteflow.version>2.15.3</liteflow.version>
     </properties>
 
     <dependencyManagement>
@@ -180,6 +183,13 @@
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.yomahub</groupId>
+                <artifactId>liteflow-spring-boot-starter</artifactId>
+                <version>${liteflow.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -287,6 +297,11 @@
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.yomahub</groupId>
+            <artifactId>liteflow-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 
